@@ -11,11 +11,13 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
