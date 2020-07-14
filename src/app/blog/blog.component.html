@@ -1,5 +1,7 @@
-<div *ngFor="let post of posts">
-    <app-blog-post [post]="post">
+<div class="wrapper">
+    <div *ngFor="let post of posts" class="card">
+        <app-blog-post [post]="post">
 
-    </app-blog-post>
+        </app-blog-post>
+    </div>
 </div>

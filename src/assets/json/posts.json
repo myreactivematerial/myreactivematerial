@@ -1,9 +1,43 @@
 {
     "posts": [
         {
+            "id": 1,
             "title": "Potato",
             "author": "Tomato",
-            "body": "Eggplant",
+            "snippet": "Eggplant",
+            "body": [
+                "first paragraph",
+                "second paragraph",
+                "third paragraph"
+            ],
+            "picture": "assets/pictures/Potato_Wedges.jpeg",
+            "pictureDescription": "Potato wedges!",
+            "url": "https://en.wikipedia.org/wiki/Potato"
+        },
+        {
+            "id": 2,
+            "title": "Potato",
+            "author": "Tomato",
+            "snippet": "Eggplant",
+            "body": [
+                "first paragraph",
+                "second paragraph",
+                "third paragraph"
+            ],
+            "picture": "assets/pictures/Potato_Wedges.jpeg",
+            "pictureDescription": "Potato wedges!",
+            "url": "https://en.wikipedia.org/wiki/Potato"
+        },
+        {
+            "id": 3,
+            "title": "Potato",
+            "author": "Tomato",
+            "snippet": "Eggplant",
+            "body": [
+                "first paragraph",
+                "second paragraph",
+                "third paragraph"
+            ],
             "picture": "assets/pictures/Potato_Wedges.jpeg",
             "pictureDescription": "Potato wedges!",
             "url": "https://en.wikipedia.org/wiki/Potato"
