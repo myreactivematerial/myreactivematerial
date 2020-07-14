@@ -3,12 +3,14 @@
         {
             "title": "Gettysburg Address",
             "author": "Abraham Lincoln",
-            "body": "Four score and twenty years ago"
+            "body": "Four score and twenty years ago",
+            "picture": "https://material.angular.io/assets/img/examples/shiba2.jpg"
         },
         {
             "title": "I have a dream",
             "author": "Martin Luther King Jr.",
-            "body": "Five score years ago, a great American, in whose symbolic shadow we stand, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of captivity."
+            "body": "Five score years ago, a great American, in whose symbolic shadow we stand, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of captivity.",
+            "picture": "https://material.angular.io/assets/img/examples/shiba2.jpg"
         }
     ]
 }
