@@ -29,6 +29,9 @@ jobs:
     - run: yarn run ng test --watch=false
 
   test:
+
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
