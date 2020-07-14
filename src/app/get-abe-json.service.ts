@@ -10,7 +10,7 @@ export class GetAbeJsonService {
 
   abeUrl = 'assets/json/abe.json';
 
-  getConfig() {
+  getAbe() {
     return this.http.get(this.abeUrl);
   }
 }
