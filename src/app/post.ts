@@ -3,4 +3,6 @@ export class Post {
     author: string = "";
     body: string = "";
     picture: string = "";
+    pictureDescription: string = "";
+    url: string = "";
 }

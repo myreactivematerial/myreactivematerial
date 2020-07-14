@@ -1,16 +1,20 @@
 {
     "posts": [
         {
-            "title": "Gettysburg Address",
-            "author": "Abraham Lincoln",
-            "body": "Four score and twenty years ago",
-            "picture": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+            "title": "Biden Announces $2 Trillion Climate Plan",
+            "author": "Katie Glueck and Lisa Friedman",
+            "body": "Mr. Biden’s plan links tackling climate change with economic recovery from the coronavirus and addressing racism, drawing praise from onetime critics.",
+            "picture": "/assets/pictures/biden-nytimes.jpeg",
+            "pictureDescription": "Former Vice President Joseph R. Biden Jr. is expected to unveil a plan for reducing fossil fuel use across the U.S. economy.CreditCredit...Michelle V. Agins/The New York Times",
+            "url": "https://www.nytimes.com/2020/07/14/us/politics/biden-climate-plan.html"
         },
         {
-            "title": "I have a dream",
-            "author": "Martin Luther King Jr.",
-            "body": "Five score years ago, a great American, in whose symbolic shadow we stand, signed the Emancipation Proclamation. This momentous decree came as a great beacon light of hope to millions of Negro slaves who had been seared in the flames of withering injustice. It came as a joyous daybreak to end the long night of captivity.",
-            "picture": "https://material.angular.io/assets/img/examples/shiba2.jpg"
+            "title": "Potato",
+            "author": "Tomato",
+            "body": "Eggplant",
+            "picture": "assets/pictures/Potato_Wedges.jpeg",
+            "pictureDescription": "Potato wedges!",
+            "url": "https://en.wikipedia.org/wiki/Potato"
         }
     ]
 }

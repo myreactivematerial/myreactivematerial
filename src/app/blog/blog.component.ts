@@ -19,11 +19,6 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     this.abeService.getPosts().subscribe((response: PostsResponse) => {
       this.posts = response.posts;
-      this.posts.forEach(x => {
-        console.log(x.author);
-        console.log(x.title);
-        console.log(x.body);
-      });
     });
   }
 

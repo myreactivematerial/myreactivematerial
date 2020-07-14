@@ -15,4 +15,10 @@ export class BlogPostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onMoreInformationClick(): void {
+    if (this.post.url.trim() !== "") {
+      window.location.href = this.post.url;
+    }
+  }
+
 }
