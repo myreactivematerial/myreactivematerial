@@ -20,7 +20,6 @@ describe('LoggerService', () => {
     expect(service.logs.findIndex(message => message === `test message`) === 0).toBeTrue();
   });
 
-
   it('should add two messages to log', () => {
     service.log(`test message`);
     service.log(`second message`);
