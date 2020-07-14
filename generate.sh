@@ -1,7 +1,7 @@
 #!/bin/bash
 
-END=200
+END=400
 
 for i in $(seq 1 $END)
-do time ng generate component TestComponent$i
+do time ng generate component load-testing/TestComponent$i
 done
