@@ -24,5 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run ng build --prod
+    - run: npm install -g yarn
+    - run: yarn install --frozen-lockfile
+    - run: yarn run ng build --prod
