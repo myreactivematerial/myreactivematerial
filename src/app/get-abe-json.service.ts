@@ -7,4 +7,10 @@ import { HttpClient } from '@angular/common/http';
 export class GetAbeJsonService {
 
   constructor(private http: HttpClient) { }
+
+  abeUrl = 'assets/json/abe.json';
+
+  getConfig() {
+    return this.http.get(this.abeUrl);
+  }
 }
