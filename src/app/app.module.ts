@@ -12,12 +12,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    BlogComponent
+    BlogComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,

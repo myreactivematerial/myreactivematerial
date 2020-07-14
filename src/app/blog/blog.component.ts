@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { GetAbeJsonService } from '../get-abe-json.service';
+import { PostsResponse } from '../posts-response';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  posts: Array<Post> = [];
+
+  constructor(
+    private abeService: GetAbeJsonService
+  ) { }
 
   ngOnInit(): void {
+    this.abeService.getPosts().subscribe((response: PostsResponse) => {
+      this.posts = response.posts;
+      this.posts.forEach(x => {
+        console.log(x.author);
+        console.log(x.title);
+        console.log(x.body);
+      });
+    });
   }
 
 }
