@@ -1,0 +1,10 @@
+<p>drupal-simple-article works!</p>
+
+<article *ngFor="let article of articles">
+    <h1>
+        {{ article.attributes.title }}
+    </h1>
+    <p *ngFor="let paragraph of article.attributes.field_simple_article_body">
+        {{ paragraph }}
+    </p>
+</article>

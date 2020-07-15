@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import { BlogComponent } from './blog/blog.component';
+import { DrupalBetterArticleComponent } from './drupal-better-article/drupal-better-article.component';
+import { DrupalSimpleArticleComponent } from './drupal-simple-article/drupal-simple-article.component';
 
 
 const routes: Routes = [
@@ -11,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: "blog",
-    component: BlogComponent
+    component: BlogComponent,
+  },
+  {
+    path: "drupal",
+    component: DrupalSimpleArticleComponent,
   }
 ];
 

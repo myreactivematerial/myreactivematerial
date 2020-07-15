@@ -13,13 +13,17 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { DrupalBetterArticleComponent } from './drupal-better-article/drupal-better-article.component';
+import { DrupalSimpleArticleComponent } from './drupal-simple-article/drupal-simple-article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     BlogComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    DrupalBetterArticleComponent,
+    DrupalSimpleArticleComponent
   ],
   imports: [
     BrowserModule,
