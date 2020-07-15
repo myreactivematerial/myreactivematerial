@@ -11,4 +11,5 @@ cd /home/kushal/src/html/myreactivematerialfirebase/reactivematerialgithubio/;
 git add .;
 time git commit -m "add all files" -m "get ready to deploy";
 time git push origin master;
+cd /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/;
 time firebase deploy;
