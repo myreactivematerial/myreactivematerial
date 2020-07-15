@@ -16,7 +16,7 @@ const routes: Routes = [
     component: BlogComponent,
   },
   {
-    path: "drupal",
+    path: "",
     component: DrupalSimpleArticleComponent,
   }
 ];

@@ -1,10 +1,19 @@
-<p>drupal-simple-article works!</p>
-
 <article *ngFor="let article of articles">
-    <h1>
-        {{ article.attributes.title }}
-    </h1>
-    <p *ngFor="let paragraph of article.attributes.field_simple_article_body">
-        {{ paragraph }}
-    </p>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{ article.attributes.title }}
+            </mat-card-title>
+            <mat-card-subtitle>
+                <span [matTooltip]="article.attributes.created">Created at: {{ article.attributes.created | date:'medium' }} </span>
+                <span [matTooltip]="article.attributes.changed">Modified at:
+                    {{ article.attributes.changed | date:'medium'  }}</span>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p *ngFor="let paragraph of article.attributes.field_simple_article_body">
+                {{ paragraph }}
+            </p>
+        </mat-card-content>
+    </mat-card>
 </article>
