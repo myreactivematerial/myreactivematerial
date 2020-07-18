@@ -1,7 +1,7 @@
-import { DrupalAttribute } from './drupal-attribute';
+import { DrupalSimpleArticleAttribute } from './drupal-simple-article-attribute';
 
 export class DrupalSimpleArticle {
     type: string = '';
     id: string  = '';
-    attributes: DrupalAttribute = new DrupalAttribute;
+    attributes: DrupalSimpleArticleAttribute = new DrupalSimpleArticleAttribute;
 }
