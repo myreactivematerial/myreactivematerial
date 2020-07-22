@@ -1,3 +1,5 @@
+<button mat-stroked-button color="primary" (click)="onClickRefresh">Refresh</button>
+
 <article *ngFor="let article of articles">
     <mat-card>
         <mat-card-header>
@@ -5,7 +7,8 @@
                 {{ article.attributes.title }}
             </mat-card-title>
             <mat-card-subtitle>
-                <span [matTooltip]="article.attributes.created">Created at: {{ article.attributes.created | date:'medium' }} </span>
+                <span [matTooltip]="article.attributes.created">Created at:
+                    {{ article.attributes.created | date:'medium' }} </span>
                 <span [matTooltip]="article.attributes.changed">Modified at:
                     {{ article.attributes.changed | date:'medium'  }}</span>
             </mat-card-subtitle>

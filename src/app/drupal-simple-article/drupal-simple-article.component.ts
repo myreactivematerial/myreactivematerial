@@ -16,10 +16,17 @@ export class DrupalSimpleArticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.onClickRefresh();
+  }
+
+  getArticles(): void {
     this.service.getPosts().subscribe((response) => {
       this.articles = response.data.sort((a, b) => (a.attributes.changed > b.attributes.changed) ? -1 : (b.attributes.changed > a.attributes.changed) ? 1 : 0);
-      console.log(this.articles);
     });
+  }
+
+  onClickRefresh(): void {
+    this.getArticles();
   }
 
 }
