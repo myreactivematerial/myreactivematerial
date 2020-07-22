@@ -12,9 +12,7 @@ import { PostsResponse } from './posts-response';
 export class AppComponent implements OnInit {
   title = 'ReactiveMaterial';
 
-  constructor(
-    private abeService: GetAbeJsonService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void { }
 }
