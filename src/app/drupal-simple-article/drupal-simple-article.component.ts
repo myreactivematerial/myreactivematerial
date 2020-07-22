@@ -28,7 +28,7 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-
+    this.subscription.unsubscribe();
   }
 
   getArticles(): void {
