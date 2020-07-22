@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ReloadArticleClickService } from '../reload-article-click.service';
 
 @Component({
   selector: 'app-reload-article',
@@ -8,23 +9,16 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ReloadArticleComponent implements OnInit {
 
-  private reloadBehaviorSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  public reloadObservable: Observable<boolean> = this.reloadBehaviorSubject as Observable<boolean>;
-  
   constructor(
+    private service: ReloadArticleClickService,
   ) {
   }
 
   ngOnInit(): void {
-    this.reloadObservable.subscribe((response: boolean) => {
-      if (response === true) {
-        console.log(`we clicked the button`);
-      }
-    });
   }
 
   onClickRefresh(): void {
-    this.reloadBehaviorSubject.next(true);
+    this.service.onClickRefresh();
   }
 
 }
