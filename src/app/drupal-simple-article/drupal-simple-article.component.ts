@@ -1,22 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import {DrupalSimpleArticleService} from '../drupal-simple-article.service';
+import { DrupalSimpleArticleService } from '../drupal-simple-article.service';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-drupal-simple-article',
   templateUrl: './drupal-simple-article.component.html',
   styleUrls: ['./drupal-simple-article.component.sass']
 })
-export class DrupalSimpleArticleComponent implements OnInit {
+export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
 
   articles: Array<any> = [];
-
+  private subscription: Subscription = new Subscription();
   constructor(
     private service: DrupalSimpleArticleService,
+    
   ) { }
 
   ngOnInit(): void {
-    this.onClickRefresh();
+    this.getArticles();
+    const source = interval(10000);
+    this.subscription = source.subscribe((val: number) => {
+      console.log(val);
+      this.getArticles();
+    });
+
+  }
+
+  ngOnDestroy(): void {
+
   }
 
   getArticles(): void {
