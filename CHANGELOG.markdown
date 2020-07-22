@@ -1,3 +1,12 @@
+v0.0.2
+
+Added:
+- Refresh button on toolbar 
+- Reload automatically every 10 seconds using interval and subscription in rxjs
+
+Known issues:
+- Make the interval configurable using environment file.
+
 v0.0.1
 
 Added:
