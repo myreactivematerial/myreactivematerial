@@ -16,6 +16,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { DrupalBetterArticleComponent } from './drupal-better-article/drupal-better-article.component';
 import { DrupalSimpleArticleComponent } from './drupal-simple-article/drupal-simple-article.component';
 import { ReloadArticleComponent } from './reload-article/reload-article.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReloadArticleComponent } from './reload-article/reload-article.componen
     BlogPostComponent,
     DrupalBetterArticleComponent,
     DrupalSimpleArticleComponent,
-    ReloadArticleComponent
+    ReloadArticleComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
