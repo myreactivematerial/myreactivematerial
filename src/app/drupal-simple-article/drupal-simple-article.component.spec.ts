@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DrupalSimpleArticleComponent } from './drupal-simple-article.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { LoadingComponent } from '../loading/loading.component';
+import { ReloadArticleComponent } from '../reload-article/reload-article.component';
 
 describe('DrupalSimpleArticleComponent', () => {
   let component: DrupalSimpleArticleComponent;
@@ -9,7 +11,7 @@ describe('DrupalSimpleArticleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DrupalSimpleArticleComponent],
+      declarations: [DrupalSimpleArticleComponent, LoadingComponent, ReloadArticleComponent],
       imports: [HttpClientTestingModule]
     })
       .compileComponents();
