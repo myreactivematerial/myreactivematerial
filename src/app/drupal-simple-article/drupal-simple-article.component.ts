@@ -4,6 +4,7 @@ import { DrupalSimpleArticleService } from '../drupal-simple-article.service';
 import { interval, Subscription } from 'rxjs';
 import { ReloadArticleClickService } from '../reload-article-click.service';
 import { LoadingService } from '../loading.service';
+import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-drupal-simple-article',
@@ -22,7 +23,7 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getArticles();
-    const source = interval(10000);
+    const source = interval(environment.loadEveryNSeconds * 1000);
     this.subscription = source.subscribe((val: number) => {
       console.log(val);
       this.getArticles();
