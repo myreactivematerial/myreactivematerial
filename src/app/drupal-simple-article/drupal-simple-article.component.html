@@ -1,5 +1,5 @@
 <article *ngFor="let article of articles">
-    <mat-card>
+    <mat-card (click)="openDialog(article)">
         <mat-card-header>
             <mat-card-title>
                 {{ article.attributes.title }}

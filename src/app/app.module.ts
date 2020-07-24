@@ -17,6 +17,7 @@ import { DrupalBetterArticleComponent } from './drupal-better-article/drupal-bet
 import { DrupalSimpleArticleComponent } from './drupal-simple-article/drupal-simple-article.component';
 import { ReloadArticleComponent } from './reload-article/reload-article.component';
 import { LoadingComponent } from './loading/loading.component';
+import { DrupalSimpleArticleDialogComponent } from './drupal-simple-article-dialog/drupal-simple-article-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoadingComponent } from './loading/loading.component';
     DrupalBetterArticleComponent,
     DrupalSimpleArticleComponent,
     ReloadArticleComponent,
-    LoadingComponent
+    LoadingComponent,
+    DrupalSimpleArticleDialogComponent
   ],
   imports: [
     BrowserModule,

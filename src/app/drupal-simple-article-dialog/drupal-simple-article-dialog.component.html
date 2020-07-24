@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{article.attributes.title}}</h1>
+<div mat-dialog-content>
+    <span [matTooltip]="article.attributes.created.toLocaleString()">Created at:
+        {{ article.attributes.created | date:'medium' }} </span>
+    <span [matTooltip]="article.attributes.changed.toLocaleString()">Modified at:
+        {{ article.attributes.changed | date:'medium'  }}</span>
+    <p *ngFor="let paragraph of article.attributes.field_simple_article_body">
+        {{ paragraph }}
+    </p>
+</div>
+<div mat-dialog-actions>
+    <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+    <button mat-button [mat-dialog-close]="article" cdkFocusInitial>Ok</button>
+</div>

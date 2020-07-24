@@ -5,6 +5,9 @@ import { interval, Subscription } from 'rxjs';
 import { ReloadArticleClickService } from '../reload-article-click.service';
 import { LoadingService } from '../loading.service';
 import { environment } from './../../environments/environment';
+import { MatDialog } from '@angular/material/dialog';
+import { DrupalSimpleArticle } from '../drupal-simple-article';
+import { DrupalSimpleArticleDialogComponent } from '../drupal-simple-article-dialog/drupal-simple-article-dialog.component';
 
 @Component({
   selector: 'app-drupal-simple-article',
@@ -19,10 +22,15 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
     private service: DrupalSimpleArticleService,
     private reloadArticleClickService: ReloadArticleClickService,
     private loadingService: LoadingService,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
     this.getArticles();
+    this.reloadData();
+  }
+
+  reloadData():void {
     const source = interval(environment.loadEveryNSeconds * 1000);
     this.subscription = source.subscribe((val: number) => {
       console.log(val);
@@ -42,6 +50,17 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
   getArticles(): void {
     this.loadingService.showLoaderUntilCompleted(this.service.getPosts()).subscribe((response) => {
       this.articles = response.data.sort((a, b) => (a.attributes.changed > b.attributes.changed) ? -1 : (b.attributes.changed > a.attributes.changed) ? 1 : 0);
+    });
+  }
+
+  openDialog(article: DrupalSimpleArticle): void {
+    const dialogRef = this.dialog.open(DrupalSimpleArticleDialogComponent, {
+      // width: '250px',
+      data: article
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
     });
   }
 
