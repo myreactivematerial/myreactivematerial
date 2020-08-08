@@ -8,6 +8,7 @@ time ng update;
 time ng build --prod;
 time ng test --watch=false --codeCoverage=true;
 time rsync -av /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/dist/ReactiveMaterial/ /home/kushal/src/html/myreactivematerialfirebase/reactivematerialgithubio/;
+time rsync -av /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/coverage/ /home/kushal/src/html/myreactivematerialfirebase/reactivematerialgithubio/coverage/;
 time git add .;
 time git commit -m "update angular" -m "angular {cli, cdk, material}, and rxjs";
 time git push origin --all;
