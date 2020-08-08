@@ -1,9 +1,10 @@
 v0.0.2
 
 Added:
-- Refresh button on toolbar 
+- Refresh button on toolbar
 - Reload automatically every 10 seconds using interval and subscription in rxjs
 - Add reload spinning indicator (mat spinner)
+- Add publicly accessible code coverage at https://myreactivematerial.github.io/coverage/myreactivematerial/index.html
 
 Known issues:
 - Make the interval configurable using environment file.
