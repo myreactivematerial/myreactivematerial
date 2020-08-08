@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DrupalSimpleArticleDialogComponent } from './drupal-simple-article-dialog.component';
 import { MatDialog, MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MaterialModule } from '../material/material.module';
 
 describe('DrupalSimpleArticleDialogComponent', () => {
   let component: DrupalSimpleArticleDialogComponent;
@@ -10,7 +11,9 @@ describe('DrupalSimpleArticleDialogComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [DrupalSimpleArticleDialogComponent,],
-      imports: [MatDialogModule],
+      imports: [
+        MaterialModule
+      ],
       providers:
         [
           {
