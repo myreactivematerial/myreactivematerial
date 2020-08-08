@@ -8,7 +8,7 @@ describe('ReloadArticleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReloadArticleComponent ]
+      declarations: [ ReloadArticleComponent ],
     })
     .compileComponents();
   }));
@@ -21,5 +21,9 @@ describe('ReloadArticleComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should refresh when we click refresh', () => {
+    expect(component.onClickRefresh()).not.toBeDefined();
   });
 });
