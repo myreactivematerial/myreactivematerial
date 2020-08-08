@@ -2,11 +2,11 @@
 #!/bin/bash
 
 cd /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/;
-time ng update;
-time ng update @angular/core @angular/cli @angular/cdk @angular/material rxjs;
-time ng update;
-time ng build --prod;
-time ng test --watch=false --codeCoverage=true;
+time yarn run ng update;
+time yarn run ng update @angular/core @angular/cli @angular/cdk @angular/material rxjs;
+time yarn run ng update;
+time yarn run ng build --prod;
+time yarn run ng test --watch=false --codeCoverage=true;
 time rsync -av /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/dist/ReactiveMaterial/ /home/kushal/src/html/myreactivematerialfirebase/reactivematerialgithubio/;
 time rsync -av /home/kushal/src/html/myreactivematerialfirebase/ReactiveMaterial/coverage/ /home/kushal/src/html/myreactivematerialfirebase/reactivematerialgithubio/coverage/;
 time git add .;
