@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   loadEveryNSeconds: 3,
+  hardReloadEveryNSeconds: 60,
 };
 
 /*

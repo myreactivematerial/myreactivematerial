@@ -26,19 +26,21 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.service.getPosts();
+    this.service.reloadData(environment.hardReloadEveryNSeconds);
     this.getArticles();
-    this.reloadData();
+    this.reloadData(environment.loadEveryNSeconds);
   }
 
-  reloadData():void {
-    const source = interval(environment.loadEveryNSeconds * 1000);
+  reloadData(loadEveryNSeconds: number):void {
+    const source = interval(loadEveryNSeconds * 1000);
     this.subscription = source.subscribe((val: number) => {
       console.log(val);
       this.getArticles();
     });
     this.reloadArticleClickService.reloadObservable.subscribe((response: boolean) => {
       if (response === true) {
-        this.getArticles();
+        this.service.getPosts();
       }
     });
   }
@@ -48,7 +50,7 @@ export class DrupalSimpleArticleComponent implements OnInit, OnDestroy {
   }
 
   getArticles(): void {
-    this.loadingService.showLoaderUntilCompleted(this.service.getPosts()).subscribe((response) => {
+    this.service.myObservable$.subscribe((response) => {
       this.articles = response.data.sort((a, b) => (a.attributes.changed > b.attributes.changed) ? -1 : (b.attributes.changed > a.attributes.changed) ? 1 : 0);
     });
   }
