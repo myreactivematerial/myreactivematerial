@@ -18,6 +18,7 @@ import { DrupalSimpleArticleComponent } from './drupal-simple-article/drupal-sim
 import { ReloadArticleComponent } from './reload-article/reload-article.component';
 import { LoadingComponent } from './loading/loading.component';
 import { DrupalSimpleArticleDialogComponent } from './drupal-simple-article-dialog/drupal-simple-article-dialog.component';
+import { DrupalSimpleArticleTwoComponent } from './drupal-simple-article-two/drupal-simple-article-two.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DrupalSimpleArticleDialogComponent } from './drupal-simple-article-dial
     DrupalSimpleArticleComponent,
     ReloadArticleComponent,
     LoadingComponent,
-    DrupalSimpleArticleDialogComponent
+    DrupalSimpleArticleDialogComponent,
+    DrupalSimpleArticleTwoComponent
   ],
   imports: [
     BrowserModule,
