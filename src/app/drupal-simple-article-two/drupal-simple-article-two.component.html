@@ -1,1 +1,12 @@
-<p>drupal-simple-article-two works!</p>
+<article *ngFor="let x of (articles$ | async)?.data">
+  <h1>
+    {{ x.attributes.title }}
+  </h1>
+  <p *ngFor="let y of x.attributes.field_simple_article_body">
+    {{ y }}
+  </p>
+  <p>
+    Date Created: {{ x.attributes.created | date:'short'}}
+    Last Modified: {{ x.attributes.changed | date:'short' }}
+  </p>
+</article>

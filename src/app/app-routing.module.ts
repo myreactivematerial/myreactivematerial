@@ -1,3 +1,4 @@
+import { DrupalSimpleArticleTwoComponent } from './drupal-simple-article-two/drupal-simple-article-two.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: "blog",
     component: BlogComponent,
+  },
+  {
+    path: "two",
+    component: DrupalSimpleArticleTwoComponent,
   },
   {
     path: "",
