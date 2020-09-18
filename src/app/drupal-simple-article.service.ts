@@ -16,10 +16,10 @@ export class DrupalSimpleArticleService {
   constructor(
     private http: HttpClient,
     private loadingService: LoadingService) {
-      const dummyData = this.createDummyData();
-      this.myBehaviorSubject = new BehaviorSubject<DrupalSimpleArticleData>(dummyData);
-      this.myObservable$ = this.myBehaviorSubject as Observable<DrupalSimpleArticleData>;
-    }
+    const dummyData = this.createDummyData();
+    this.myBehaviorSubject = new BehaviorSubject<DrupalSimpleArticleData>(dummyData);
+    this.myObservable$ = this.myBehaviorSubject as Observable<DrupalSimpleArticleData>;
+  }
 
   jsonUrl: string = 'https://live-europeanunion.pantheonsite.io/jsonapi/node/simplearticle';
 
@@ -30,7 +30,7 @@ export class DrupalSimpleArticleService {
     });
   }
 
-  reloadData(loadEveryNSeconds: number):void {
+  reloadData(loadEveryNSeconds: number): void {
     const source = interval(loadEveryNSeconds * 1000);
     this.subscription = source.subscribe((val: number) => {
       this.getPosts();
@@ -44,9 +44,13 @@ export class DrupalSimpleArticleService {
     article.type = 'fake';
     article.attributes.changed = new Date();
     article.attributes.created = new Date();
-    article.attributes.field_simple_article_body = ['fake'];
+    article.attributes.field_simple_article_body = [
+      'First of all, I would like to apologize to you. If you are reading this, we were not quick enough',
+      'This is just placeholder text and ideally you should never see it. However, if wishes were fishes... back in the real world, this blog has a backend and this is really an exercise to try to figure out a general answer to the problem of dynamic articles in a blog. The blog still has to come from a database and that is an extra call because we do not believe in server-side rendering at all.',
+      'Anyway, thank you for reading this fake article. I hope you stay to read the real articles and enjoy them at least as much as you enjoyed this fake article.'
+    ];
     article.attributes.langcode = 'en-US';
-    article.attributes.title = 'fake';
+    article.attributes.title = 'Breaking News: Placeholder text is taking over the world!';
     dummyData.data.push(article);
     return dummyData;
   }
