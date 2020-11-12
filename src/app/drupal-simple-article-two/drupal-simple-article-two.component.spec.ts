@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DrupalSimpleArticleTwoComponent } from './drupal-simple-article-two.component';
 import { LoadingComponent } from '../loading/loading.component';
@@ -12,7 +12,7 @@ describe('DrupalSimpleArticleTwoComponent', () => {
   let component: DrupalSimpleArticleTwoComponent;
   let fixture: ComponentFixture<DrupalSimpleArticleTwoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [DrupalSimpleArticleTwoComponent, LoadingComponent, ReloadArticleComponent, DatePipe],
       imports: [HttpClientTestingModule, MatDialogModule, MaterialModule],
