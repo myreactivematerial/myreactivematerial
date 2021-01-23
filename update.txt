@@ -11,3 +11,26 @@ info "fsevents@1.2.13" is an optional dependency and failed compatibility check.
 [3/4] Linking dependencies...
 [4/4] Building fresh packages...
 Done in 36.26s.
+yarn install v1.22.10
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.89s.
+yarn run v1.22.10
+$ ng update
+Installing packages for tooling via yarn.
+Installed packages for tooling via yarn.
+Using package manager: 'yarn'
+Collecting installed dependencies...
+Found 33 dependencies.
+    We analyzed your package.json, there are some packages to update:
+    
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cdk                       11.0.1 -> 11.1.0         ng update @angular/cdk
+      @angular/cli                       11.0.3 -> 11.1.1         ng update @angular/cli
+      @angular/core                      11.0.3 -> 11.1.0         ng update @angular/core
+      @angular/material                  11.0.1 -> 11.1.0         ng update @angular/material
+    
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
+Done in 13.48s.
